@@ -1,0 +1,25 @@
+Common params			
+num_param		10
+num_time		800
+num_node		14300
+num_var		1
+datasetNo		2
+interp_lower		3	#In reality param no. interp1+1
+interp_upper		4	#In reality param no. interp1+1
+	
+% Lv1, spatial CAE
+Lv1_epochs		20000
+Lv1_batch_size		10	# = parametric variations
+Lv1_LearningR		1e-4
+Lv1_latent_dim		128
+	
+% Input Lv1 latent vectors
+Lv1_epoch_read		1000
+	
+% Lv2, temporal VAE
+Lv2_epochs		50000
+Lv2_latent_epochs	10000	#Epochs to find appropriate latent vector when using VAE
+Lv2_batch_size		1
+Lv2_LearningR		5e-5
+Lv2_latent_dim		16
+Lv2_alpha		0
